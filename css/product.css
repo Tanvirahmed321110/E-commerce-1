@@ -1,0 +1,242 @@
+
+.product.grid-2{
+    gap: 20px;
+    align-items: flex-start;
+}
+/* _____ Product Image ____ */
+.product-images{
+    margin-right: 50px;
+}
+.product-images .product-image{
+    padding: 25px;
+    background-color: var(--container-color);
+    display: flex;
+    
+    justify-content: center;
+}
+.product-images img{
+    width: 200px;
+}
+
+/* ____ Product Info ____ */
+.product-info-head .section__subtitle{
+    font-size: var(--h2-font);
+}
+
+
+/* ___ Rating ___ */
+.product-info .reviews .rating{
+    color: var(--hover-color);
+}
+
+.product-info .reviews .rating:hover{
+    color: var(--orange-color);
+}
+
+.product-info .reviews .rating i{
+    margin-right: -3px;
+}
+
+.product-info .reviews .total-reviews{
+    font-size: var(--smaller-font);
+    color: var(--gray-color);
+}
+
+
+/* ____ Product Price ____ */
+.product-info .product-price .current-price,
+.product-info .product-price .current-price i{
+    font-weight: var(--font-bold);
+}
+
+.product-info .product-price .old-price{
+    color: var(--hover-color);
+    text-decoration: line-through;
+}
+
+.product-info .product-price .discount{
+    background-color: var(--title-color);
+    color: var(--container-color);
+    padding: 3px 6px;
+    border-radius: 2px;
+    font-size: var(--smaller-font);
+}
+
+/* ___ Product Quantity ___ */
+.product-quantity-wrapper{
+    gap: 50px;
+}
+.product-quantity{
+    background-color: var(--border-color);
+    width: fit-content;
+    border-radius: 4px;
+    padding: 10px 20px;
+    align-items: center;
+    font-size: var(--h3-font);
+}
+.product-quantity button{
+    padding: 7px 8px;
+}
+.product-quantity .display-quantity{
+    font-weight: var(--font-medium);
+}
+.product-quantity button i{
+    font-weight: var(--font-bold) ;
+}
+
+.product-quantity-wrapper .love {
+    font-size: var(--h3-font);
+    border: 1px solid transparent;
+    padding: 2px;
+}
+
+.product-quantity-wrapper .love:focus{
+    color: var(--orange-color);
+    border: 1px solid var(--border-color);
+}
+
+/* ___ Product Details ___ */
+.product-description{
+    font-size: var(--small-font);
+}
+.product-details ul{
+    padding-left: 40px;
+    list-style:square;
+    font-size: var(--small-font);
+}
+
+
+
+/* ____________  Light Box  ____________ */
+.lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.411);
+    z-index: 10;
+    cursor: zoom-out;
+    padding: 20px;
+    display: none;
+}
+
+/* _____ Light Box Content ____ */
+.lightbox-content{
+    position:relative;
+}
+.lightbox-close::selection{
+    user-select: none;
+}
+.lightbox-close{
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background-color: var(--container-color);
+    height: 30px;
+    width: 30px;
+    font-size: var(--h2-font);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    color: var(--title-color);
+}
+.lightbox-close:hover{
+    color: var(--orange-color);
+}
+
+.lightbox-img{
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 450px;
+    cursor: pointer;
+    background-color: var(--container-color);
+    display: block;
+    padding: 25px;
+}
+
+/* _____  lightbox-caption ____ */
+.lightbox-caption{
+    color: var(--container-color);
+    padding: 5px 0;
+}
+
+.lightbox-buttons .next-btn,
+.lightbox-buttons .prev-btn{
+    position: absolute;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: 12;
+    background-color: var(--container-color);
+    border-radius: 50%;
+    font-size: var(--h1-font);
+    transition: .4s linear;
+}
+.lightbox-buttons .next-btn{
+    left: 50px;
+}
+.lightbox-buttons .prev-btn{
+    right: 50px;
+}
+.lightbox-buttons .next-btn i,
+.lightbox-buttons .prev-btn i{
+    transition: 1s linear;
+    color: var(--title-color);
+}
+
+/* Hover and active */
+.lightbox-buttons .next-btn:hover,
+.lightbox-buttons .prev-btn:hover{
+    transform: scale(1.12);
+}
+.lightbox-buttons .next-btn:active,
+.lightbox-buttons .prev-btn:active{
+    transform: scale(1);
+}
+
+/* Added A Active Class */
+.lightbox.active{
+    display: flex;
+}
+
+/* Add Animation in Content */
+.lightbox.active .lightbox-content{
+    animation: lightboxImageAni .5s ease;
+}
+
+.lightbox.closing .lightbox-content{
+    animation: lightboxImageAni .5s ease reverse;
+}
+
+
+@keyframes lightboxImageAni{
+    0%{
+        transform: scale(.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+@media screen and (max-width:991px){
+    .product-images{
+        margin-right: 10px;
+    }
+    .product-images.grid-2{
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:991px){
+    .product-images{
+        margin-bottom: 25px;
+    }
+    .product-images.grid-2{
+        grid-template-columns: 1fr 1fr;
+    }
+    .product-images.grid-2{
+        gap: 10px;
+    }
+}

@@ -1,0 +1,530 @@
+
+
+/*++++++++++   Home Slider   ++++++++++ */
+.home{
+    margin-top: 100px;
+}
+.home-swiper{
+    height: fit-content;
+    padding: 5px 0;
+}
+
+/* ___ Home Slide Left ___ */
+.home-slide-left{
+    position: relative;
+}
+.home-slide-left .home-img{
+    height: 450px;
+    margin: 0 auto;
+}
+
+/* ___ Home Left Footer ___ */
+.home-left-footer{
+    position: absolute;
+    bottom: -70px;
+    right:48%;
+    transform: translateX(-48%);
+    text-align: right;
+    padding-top: 55px;
+}
+
+.home-slide-indicator{
+    position: absolute;
+    background-color: var(--dark-color);
+    right: -28px;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.home-slide-indicator::after{
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 45%;
+    transform: translateX(-45%);
+    background-color: var(--title-color);
+    width: 1px;
+    height: 70px;
+}
+
+
+
+/* ___ Home Slide Right ___ */
+.home-subtitle{
+    font-weight: var(--font-medium);
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.home-title{
+    text-transform: uppercase;
+    font-weight: var(--font-bold);
+    font-size: var(--biggest-font);
+    line-height: 70px;
+    margin: 25px 0;
+}
+
+.view-details i{
+    font-weight: bold;
+    color: var(--title-color);
+}
+.view-details:hover{
+    color: var(--title-color);
+}
+.view-details:hover i{
+    color: var(--text-color);
+}
+
+
+/* ___ swiper pagination ___ */
+.swiper-pagination{
+    margin-top: 75px;
+    position: initial
+}
+.swiper-pagination-bullet{
+    width: 8px;
+    height: 8px;
+    background-color: var(--title-color);
+    opacity: 1;
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 5px;
+}
+.swiper-pagination-bullet-active{
+    width: 29px;
+    height: 8px;
+    border-radius: 12px;
+}
+
+
+
+
+/*++++++++++   Discount Section   ++++++++++ */
+.discount-section{
+    background-color: var(--container-color);
+    padding: 40px;
+    border-radius: 30px;
+}
+.discount-area.grid-3{
+    grid-template-columns: 49% 2% 49%;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 20px;
+}
+
+.divider{
+    width:5px;
+    height: 100%;
+    border-left: 5px solid var(--body-color);
+    border-radius: 116px;
+}
+
+.discount-image img{
+    width: 280px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+/*++++++++++   New Arrivals Section   ++++++++++ */
+.arrivals-swiper{
+    margin-top: 40px;
+}
+
+.new-arrivals-item{
+    background-color: var(--container-color);
+    max-width: 288px ;
+    position: relative;
+    padding: 25px 15px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/* ___ Tag ___ */
+.new-arrivals-item .tag{
+    position:absolute;
+    top: 16px;
+    left: 5px;
+    background-color: var(--orange-color);
+    color: var(--container-color);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: var(--smaller-font);
+    transform: rotate(-35deg);
+}
+
+.new-arrivals-item .new-arrivals-img{
+    height: 200px;
+    margin: 0 auto;
+    transition: .3s;
+}
+
+/* ___ item-other ___ */
+.item-other{
+    text-align: center;
+    color: var(--gray-color);
+    font-weight: var(--font-medium);
+}
+
+/* ___ Prices ___ */
+.new-arrivals-item .new-price,
+.new-arrivals-item .new-price i{
+    font-weight: var(--font-bold);
+    color: var(--title-color);
+}
+
+.new-arrivals-item .old-price,
+.new-arrivals-item .old-price i{
+    text-decoration:line-through;
+    font-weight: var(--font-medium);
+    color: var(--hover-color);
+    font-size: var(--smaller-font);
+}
+
+
+/* ___ Cart Button ___ */
+.cart-btn,
+.love-btn{
+    position: absolute;
+    bottom: 1px;
+    right: -221px;
+    display: flex;
+    border-radius: 5px;
+    padding: 8px 12px;
+    border-bottom-right-radius: 25px;
+}
+.cart-btn i{
+    font-size: var(--h3-font);
+}
+
+/* ___ Hover in New Arrivals item ___ */
+.new-arrivals-item:hover .cart-btn{
+    right: 0;
+}
+.new-arrivals-item:hover .new-arrivals-img{
+    transform: translateY(-15px);
+}
+
+
+/* ___ Navigation buttons ___ */
+.swiper-button-next, .swiper-button-prev {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: var(--container-color);
+    font-weight: var(--font-bold);
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 18px; 
+    font-weight: var(--font-bold);
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: rgba(66, 66, 66, 0.7);
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+.swiper-button-next{
+    right: 0;
+}
+
+
+
+/*++++++++++   Steps Section   ++++++++++ */
+.steps{
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.steps-items{
+    margin-top: 40px;
+}
+.steps-item{
+    padding: 40px 24px;
+}
+.steps-item .section__subtitle{
+    text-align: left;
+}
+
+/* __ Num __ */
+.num{
+    background-color: var(--orange-color);
+    padding: 12px 20px;
+    display: inline-block;
+    font-weight: var(--font-medium);
+    color: var(--container-color);
+    border-radius: 5px;
+    font-size: var(--h3-font);
+}
+
+
+
+/* =================  Discount Section   ================= */
+.newsletter{
+    display: grid;
+    grid-template-columns: .4fr;
+    justify-content: center;
+    padding: 50px 25px;
+}
+
+/* __ newsletter text __ */
+.newsletter-text{
+    text-align: center;
+    padding: 0 50px;
+}
+
+/* ___ Newsletter Form ___ */
+.newsletter-form{
+    margin-top: 20px;
+    background-color: var(--container-color);
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.newsletter-form input{
+    width: 70%;
+    color: var(--text-color)
+}
+.newsletter-form input::placeholder{
+    color: var(--gray-color);
+    font-weight: normal !important; 
+}
+
+/* ============== Top Catagoris ============= */
+.top-catagoris-item{
+    border: 1px solid var(--border-color);
+    padding: 20px;
+}
+
+
+
+
+/* ===============  Popular Items  =============== */
+.popular-items.grid-4{
+    row-gap: 40px;
+}
+.popular-items{
+    margin-top: 40px;
+}
+
+.popular-items .prices.flex-center{
+    justify-content: flex-start;
+}
+
+/* ___ item ___ */
+.item{
+    display: flex;
+    flex-direction: column;
+}
+.item .buy-btn-wrapper{
+    display: flex;
+    align-items: flex-end;
+    flex-grow:1;
+}
+
+/* ___ Offer Tag ___ */
+.item .offer{
+    position: absolute;
+    left: 0px;
+    top: 1px;
+    background-color: var(--orange-color);
+    padding: 6px 5px 4px 10px;
+    font-size: 10px;
+    color: var(--container-color);
+}
+/* ___ rating ___ */
+.item .rating  i{
+    color: var(--hover-color);
+    display: inline-block;
+    margin-right:-3px;
+}
+
+/* ___ Love Btn ___ */
+.item .love-btn{
+    top: 1px;
+    right: -100px;
+    bottom: unset;
+    border-bottom-right-radius: unset;
+    border-top-right-radius: 25px;
+    font-size: var(--h3-font);
+}
+.item:hover .love-btn{
+    right: 0;
+}
+
+/* ___ Item Data ___ */
+.item-data{
+    font-size: var(--smaller-font);
+    color: var(--text-color);
+}
+
+
+
+
+
+
+
+
+
+/* ======+=  Responsive Max 1080px  =+======*/
+@media screen and (max-width: 1080px) {
+    
+    /* ________  Steps  ________ */
+    .steps-items.gap-30{
+        gap: 20px;
+    }
+
+}
+
+
+/* ======+=  Responsive Max 1080px  =+======*/
+@media screen and (max-width: 991px) {
+    
+    /* ________  Home Slide   ________ */
+    .home-slide-content{
+        gap: 15px;
+    }
+    
+    .home-title{
+        line-height: 42px;
+    }
+    
+    .home-slide-content .tags{
+        margin-left: 50px;
+        width: 100%;
+    }
+    
+    .home-slide-indicator {
+        right: -75px;
+    }
+    
+    /* ________  Tops Catagoris  ________ */
+    .top-catagoris{
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .top-catagoris-items.grid-4 {
+        grid-template-columns: repeat(2,1fr);
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    /* _______ News Letter ______ */
+    .newsletter {
+        grid-template-columns: .7fr;
+        padding: 50px 5px;
+    }
+    
+    .new-arrivals-item .new-arrivals-img {
+        height: 180px;
+    }
+
+}
+
+
+/* ======+=  Responsive Max 769px  =+======*/
+@media screen and (max-width:769px) {
+    /* ________  Home Slide   ________ */
+    .home-slide-content.grid-2{
+        grid-template-columns: repeat(1,1fr);
+        gap: 120px;
+    }
+    .home-slide-left .home-img {
+        height: 380px;
+        padding: 20px;
+    }
+     
+    
+    .home-slide-left{
+        position: relative;
+        width: 100%;
+    }
+    /* ____ home-slide-indicator ____ */
+    .home-left-footer{
+        position: absolute;
+        top: 0px;
+        right: 0;
+        text-align: right;
+        padding-top: 55px;
+    }
+    
+    .home-slide-indicator {
+        right: 15px;
+        top: 120px;
+        z-index: 8;
+    }
+    .home-slide-indicator::after{
+        right: 42%;
+        top: -70px;
+        transform: translateX(-42%);
+    }
+    
+    /* ___ Tags ___ */
+    .tags{
+        position: absolute;
+        top: 0px;
+        right: 170px;
+        
+    }
+    .tags .font-bold,.tags .item-type{
+        width: fit-content;
+        z-index: 5;
+        word-wrap: no-wrap;
+        width: 150px;
+    }
+    
+    /* _______ Discount Section ______ */
+    .discount-area.grid-3{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+    
+    /* ________  Popular Items   ________ */
+    .popular-items.grid-4{
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 40px;
+        grid-template-columns: 1fr;
+    }
+    .item {
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .item img{
+        height: 350px;
+    }
+    .new-arrivals .new-arrivals-item{
+        width: 250px;
+    }
+
+    
+    /* ________ newsletter ______ */
+    .newsletter{
+        grid-template-columns: .9fr;
+    }
+}
+
+
+
+
+/* ======+=  Responsive Max 580px  =+======*/
+@media screen and (max-width:580px) {
+    /* ___ Steps ___ */
+    .steps-items.grid-3 {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}

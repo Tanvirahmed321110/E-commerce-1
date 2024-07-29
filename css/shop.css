@@ -1,0 +1,114 @@
+@import './utlitis/style.css';
+@import './home.css';
+@import './allPages/header_footer.css';
+
+
+
+.Shop_page-main section:first-of-type{
+    margin-bottom: -30px;
+}
+
+
+
+/* _____________ Shop Section ______________ */
+.shop{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1.6fr 4fr;
+}
+
+
+/*_________ sidebar _________ */
+.sidebar{
+    background-color: var(--container-color);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+/* ____ Filter ____ */
+.filter-title{
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+}
+
+/* ____ filter-content ____ */
+.filter-content{
+    color: var(--text-color);
+    font-size: var(--small-font);
+}
+
+
+/*______________ Shop Right _______________ */
+.shop-items.grid-3{
+    row-gap: 25px;
+}
+
+
+
+/* _________  Max Width 1080px ________ */
+@media screen and (max-width:1080px){
+    .shop {
+        gap: 25px;
+        grid-template-columns: 1.2fr 4fr;
+    }
+}
+/* _________  Max Width 991px ________ */
+@media screen and (max-width:991px){
+    .shop {
+        grid-template-columns: 2fr 4fr;
+    }
+    .shop-items.grid-3{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* _________  Max Width 769px ________ */
+@media screen and (max-width:768px){
+    .shop {
+        grid-template-columns: 1fr ;
+    }
+    /* ___ Sidebar ___ */
+    .sidebar{
+        max-width: 500px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    /* shop-items */
+    .shop-items{
+        max-width: 500px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .shop-items.grid-3{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .shop-items .new-arrivals-item.item{
+        max-width: 250px;
+        width: 100%;
+    }
+}
+
+
+/* _________  Max Width 520px ________ */
+@media screen and (max-width:520px){
+    .shop {
+        grid-template-columns: 1fr ;
+    }
+    /* ___ Sidebar ___ */
+    .sidebar{
+        max-width: 400px;
+    }
+    
+    /* shop-items */
+    .shop-items{
+        max-width: 500px;
+    }
+    .shop-items.grid-3{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .shop-items .new-arrivals-item.item{
+        max-width: 350px;
+        width: 100%;
+    }
+}

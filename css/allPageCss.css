@@ -1,0 +1,14 @@
+@import './utlitis/color.css';
+@import './utlitis/style.css';
+
+/* ___ Swiper slider css ___ */
+@import './swiper-bundle.min.css';
+
+/* ___ Header and Footer ___ */
+@import './allPages/header_footer.css';
+
+/* ___ Home Page ___ */
+@import './home.css';
+
+/* ___ Product Page ___ */
+@import './product.css'

@@ -1,0 +1,486 @@
+
+/*++++++++++  Header Css  ++++++++++ */
+.header{
+    background-color: var(--container-color);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.scroll-header{
+    background-color: var(--body-color);
+    box-shadow: 0 1px 4px var(--shadow);
+    z-index: var(--z-fixed);
+}
+
+
+/* ___ Header Left ___ */
+.header-left.flex-center{
+    gap: 55px;
+}
+
+/* ___ Logo ___ */
+.logo{
+    font-weight: var(--font-medium);
+    font-size: var(--h3-font);
+}
+
+/* ___ Nav Links ___ */
+.nav-links a{
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    transition: .2s;
+}
+
+.nav-links a:hover{
+    color: var(--hover-color);
+}
+
+/* ___ active link ___ */
+.nav-links a.active{
+    position: relative;
+}
+.nav-links a.active::after{
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 45%;
+    background-color: var(--hover-color);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+
+/* ___ Header Buttons ___ */
+.header-buttons button{
+    color: var(--text-color);
+    font-size: var(--h3-font);
+    transition: transform .25s linear;
+}
+.header-buttons button:active{
+    color: var(--hover-color);
+}
+
+/* ___ Menu Btn ___ */
+.menu-btn{
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*++++++++++  Login Modal  ++++++++++ */
+.login-modal{
+    position: fixed;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+    box-shadow: -2px 0 4px var(--shadow);
+    height: 100%;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    padding: 25px;
+    transition: .6s ease-in;
+}
+.login-modal.active{
+    right: 0;
+    transition: .6s ease-out;
+}
+
+
+/* ___ Login form ___ */
+.login-form{
+    margin-top: 55px;
+}
+.login-form .login-content{
+    background-color: var(--container-color);
+    padding: 10px ;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    font-size: var(--small-font);
+    gap: 10px;
+}
+.login-form .login-content input{
+    font-size: var(--small-font);
+}
+.login-form button{
+    width: 100%;
+}
+
+/* ___ Login Modal Footer___ */
+.login-modal-footer{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin-top: 25px;
+}
+.login-modal-footer a{
+    color: var(--orange-color);
+    font-weight: var(--font-bold);
+    text-decoration: underline;
+    transition: .2s;
+}
+.login-modal-footer a:hover{
+    color: var(--hover-color);
+}
+
+/*++++++++++  Cart Modal  ++++++++++ */
+.cart-modal{
+    position: fixed;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+    box-shadow: -2px 0 4px var(--shadow);
+    height: 100%;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    padding: 25px;
+    transition: .6s ease-in;
+}
+.cart-modal.active{
+    right: 0;
+    transition: .6s ease-out;
+}
+
+.cart-close-modal,
+.login-close-modal{
+    position:absolute;
+    top: 10px;
+    right: 30px;
+    border: 1px solid var(--text-color);
+    padding: 2px 2px;
+    font-size: var(--h3-font);
+    transition: .25s;
+    color: var(--text-color) ; 
+    border-radius: 50%;
+}
+.cart-close-modal:active,
+.login-close-modal:active{
+    border:1px solid  var(--hover-color);
+    color: var(--hover-color);
+}
+
+.cart-container{
+    height: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-items{
+    max-height:400px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+/* __Change scrollbar track and thumb__ */
+.cart-items::-webkit-scrollbar {
+    width: 12px;
+    height: 12px; 
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color); 
+    border-radius: 6px; 
+}
+
+/* ___Cart Single item ___ */
+.cart-item.flex{
+    align-items: center;
+}
+
+/* ___ Cart Image ___ */
+.cart-img{
+    padding: 15px;
+    background-color: var(--container-color);
+}
+.cart-modal .cart-img img{
+    width: 65px;
+}
+
+/* ___ Cart Details ___ */
+.cart-details{
+    flex-grow: 1;
+    padding-right: 25px;
+}
+
+.cart-details.flex{
+    align-items: flex-end;
+}
+
+/* ___ Cart quantity ___ */
+.cart-quantity.flex{
+    justify-content: space-between;
+    width: 100%;
+}
+.cart-quantity-btns button {
+    background-color: var(--container-color);
+    padding: 5px;
+}
+.cart-quantity-btns button:active{
+    color: var(--orange-color);
+}
+
+.cart-quantity .delete-cart-item{
+    color: var(--orange-color);
+}
+.cart-quantity .delete-cart-item:active{
+    color: var(--hover-color);
+}
+
+
+/* ___ Cart Footer ___ */
+.cart-modal-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    padding: 25px;
+    border-top: 2px solid var(--border-color);
+}
+
+
+
+/* ============= Scroll Up ============ */
+.scroll-up{
+    position: fixed;
+    right: 30px;
+    bottom:-30%;
+    background-color: var(--text-color);
+    padding: 10px 8px;
+    border-radius: 8px;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .7s ease;
+    
+}
+.scroll-up.active{
+    bottom:60px;
+}
+
+.scroll-up:hover{
+    background-color: var(--orange-color);
+}
+.scroll-up i{
+    color: var(--border-color);
+    animation: scrollUp .6s ease-in-out infinite forwards;
+}
+
+@keyframes scrollUp {
+    0%{
+        transform: translateY(-6px);   
+    }
+    50%{
+        transform: translateY(0px);
+        color: var(--gray-color);
+    }
+    100%{
+        transform: translateY(-6px);   
+    }
+}
+
+
+
+
+
+/* =================  Footer Section   ================= */
+.footer-items{
+    margin-top:100px;
+}
+
+/* ___ Logo ___ */
+.footer-item .social a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--border-color);
+    padding: 5px;
+}
+.footer-item .social i{
+   color: var(--title-color);
+   font-size: var(--h3-font);
+}
+
+/*___ Hover in social icon ___*/
+.footer-item .social i:hover{
+    color: var(--hover-color);
+}
+
+.footer-item .section__subtitle{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.footer-item li a{
+    color: var(--text-color);
+    margin-top: 2px;
+    font-size: var(--smaller-font);
+}
+.footer-item li a:hover{
+    color: var(--hover-color);
+}
+
+/* ___ Footer Bottom ___ */
+.footer-bottom{
+    margin-top: 40px;
+    padding-bottom: 25px;
+}
+
+
+/* ____________ breadcrumb _____________ */
+.breadcrumb .before-page{
+    color: var(--title-color) ;
+}
+.breadcrumb .before-page:hover{
+    color: var(--hover-color);
+}
+.breadcrumb .current-page{
+    color: var(--orange-color);
+}
+
+
+/* _____________ pagination _____________ */
+.pagination.flex{
+    justify-content: flex-end;
+}
+
+.pagination button,
+.pagination .page{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* background-color: gray; */
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination button{
+    background-color: var(--border-color)
+}
+
+.pagination .page.active{
+    background-color: var(--orange-color);
+    color: var(--container-color);
+}
+
+/* ___ Hover in Page ___ */
+.pagination .page:hover,
+.pagination button:hover{
+    background-color: var(--orange-color);
+    color: var(--container-color);
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* ======+=  Responsive Max 769px  =+======*/
+@media screen and (max-width:991px) {
+    /* ________  Footer Section   ________ */
+    
+    .footer-items.grid-4{
+        grid-template-columns: repeat(4,1fr);
+        gap: 25px;
+    }
+
+}
+/* ======+=  Responsive Max 769px  =+======*/
+@media screen and (max-width:769px) {
+    .cart-modal,
+    .login-modal{
+        max-width: 650px;
+        width: 100%;
+    }
+    
+    /* ________ Header Section ________ */
+    /* ___ Logo ___ */
+    .logo{
+        font-size: var(--h1-font);
+    }
+    
+    /* ___ Header Right ___ */
+    .header-right{
+        display: flex;
+        gap: 10px;
+    }
+    .header-right button i{
+        font-size: var(--h1-font);
+    }
+    
+    .menu-btn{
+        display: flex;
+    }
+    
+    .menu-btn:hover i{
+        transform: rotate(360deg);
+        transition: .4s linear;
+    }
+    
+    /* ___ Nav links ___ */
+    .nav-links{
+        width: 100%;
+        position: fixed;
+        top: -25px;
+        left: 0;
+        padding: 15px;
+        background-color: var(--gray-color);
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s ease-in;
+    }
+    .nav-links.flex-center{
+        flex-direction: column;
+    }
+    .nav-links.active{
+        top: 45px;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-links li {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid white;
+        padding-bottom: 5px;
+    }
+    
+    .nav-links li a{
+        width: 100%;
+        display: block;
+    }
+
+    
+    /* ________  Footer Section   ________ */
+    .footer-items.grid-4{
+        grid-template-columns: repeat(1,1fr);
+        gap: 50px;
+        text-align: center;
+    }
+    
+    .footer-item .section__subtitle{
+        text-align: center;
+    }
+    
+    .social {
+        justify-content: center;
+    }
+
+}
+
+
+@media screen and (max-width:580px){
+    .scroll-up{
+        right: 4px;
+    }
+}

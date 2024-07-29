@@ -1,0 +1,248 @@
+
+
+.blog{
+    display: grid;
+    grid-template-columns: 2.5fr 4fr;
+    gap: 35px;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: var(--container-color);
+    align-items: center;
+    transition: .3s linear;
+}
+.blog:hover .blog-img{
+    transform: scale(1.1);
+}
+.blog-img-area{
+    overflow: hidden;
+    width: 100%;
+    border-radius: 12px;
+}
+.blog .blog-img{
+    border-radius: 12px;
+    transition: .26s linear;
+    width: 100%;
+}
+.blog .date{
+    color: var(--gray-color);
+    font-size: var(--small-font);
+}
+
+/* ___ Read More ___ */
+.blog .read-more{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+.blog .read-more:hover{
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+.blog .read-more.flex-center{
+    justify-content: flex-end;
+}
+.blog .read-more i{
+    font-weight: var(--font-bold);
+}
+
+
+
+
+
+
+/* _________________ Faq Section ________________ */
+.questions-items.grid-2{
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.questions-item{
+    background-color: var(--container-color);
+    transition: .3s;
+}
+
+/* ___ question-item-header ___*/
+.question-item-header{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.question-item-header .section__subtitle{
+    font-size: var(--normal-font);
+    text-align: left;
+}
+
+.question-item-header span{
+    display: flex;
+}
+
+.question-item-header span i{
+    font-size: var(--h3-font);
+    font-weight: var(--font-bold);
+}
+
+/* ___ question-info ___*/
+.question-info{
+    overflow: hidden;
+    height: 0;
+    transition: .3s;
+}
+
+.question-description{
+    font-size: var(--smaller-font);
+    padding: 10px  0 20px 55px;
+}
+
+/* ___ active ___ */
+.active .question-info{
+    transition: .3s;
+}
+
+
+
+
+
+/* ______________ Contact Page _____________ */
+
+/* ____contact-info-item____ */
+.contact-info-items.flex-column{
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--border-color);
+    padding:50px;
+    border-radius: 12px;
+}
+
+.contact-info-item .icon-wrapper i{
+    font-size: var(--h3-font);
+    color: var(--orange-color);
+}
+
+.contact-info-item .contact-info-title{
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+}
+
+.contact-info-item p{
+    font-size: var(--small-font);
+}
+
+/* _____ Contact Form _____ */
+.contact-form-item{
+    background-color: var(--container-color);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 5px;
+}
+
+.contact-form-item label{
+    font-size: var(--small-font);
+    font-weight: var(--font-medium);
+}
+
+.contact-form-item textarea,
+.contact-form-item input{
+    font-size: var(--smaller-font);
+    padding: 0px 1px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--gray-color);
+    margin: 0 5px;
+}
+
+.contact-form-item input:focus,
+.contact-form-item textarea:focus{
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.contact-form-item textarea{
+    border: none;
+    outline: none;
+    height: 90px;
+    resize: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+
+
+
+/* _________||  About  ||_________ */
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.about-img{
+    justify-self: center;
+}
+.about img{
+    width: 420px;
+    object-position: center;
+    object-fit: contain;
+    justify-self: center;
+}
+
+.more-about .flex-start i{
+    color: var(--orange-color);
+    font-size: var(--h3-font);
+}
+
+
+
+
+@media screen and (max-width:991px){
+    .blog{
+        grid-template-columns: 3fr 3fr;
+    }
+    
+    /* ______________ Contact Page _____________ */
+    .contact-info-items.flex-column{
+        padding: 25px;
+    }
+    .name-email.flex-between{
+        gap: 10px;
+    }
+    .contact.grid-2{
+        gap: 20px;
+    }
+}
+@media screen and (max-width:768px){
+    
+    .blog{
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    
+    /* _______||  Faq  ||_______ */
+    .questions-items.grid-2{
+        grid-template-columns: 1fr;
+        width:100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    
+    /* _________||  Contact  ||_________ */
+    .contact.grid-2{
+        grid-template-columns: 1fr;
+    }
+    .name-email.flex-between{
+        flex-direction: column;
+    }
+    
+    /* _________||  About  ||_________ */
+    .about{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .about-img img{
+        width: 300px;
+    }
+
+}

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_Commerce1/Faq's.</title>
+    <link rel="stylesheet" href="css/allPageCss.css">
+    <link rel="stylesheet" href="css/blog-faq-contact.css">
+    <!___ Box Icons ___>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+     
+</head>
+<body>
+    <!-- ____________  Header Start Here  _____________ -->
+     <header>
+        <div class="header" id="header">
+            <div class="container">
+                <div class="header-area flex-between">
+                    
+                    <!-- ___ Header Left ___ -->
+                    <div class="header-left flex-center "> 
+                        <!-- ___ Logo ___ -->
+                        <div class="logo">
+                            <a href="index.html"><i class='bx bxs-shopping-bags'></i> e-shopper</a>
+                        </div>
+                        
+                        <!-- ___ Nav ___ -->
+                        <nav>
+                            <ul class="flex-center gap-25 title-color nav-links" id="nav">
+                                <li><a  href="index.html">Home</a></li>
+                                <li><a  href="shop.html">Shop</a></li>
+                                <li><a  href="cart.html">Cart</a></li>
+                                <li><a  href="blog.html">Blog</a></li>
+                                <li><a class=" active"   href="faq.html">Faq's</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <!-- ___ Header Left ___ -->
+                    <div class="header-right">
+                        
+                        <!-- ___ Buttons ___ -->
+                         <div class="header-buttons flex-center gap-10">
+                            <button id="login-btn"><i class='bx bxs-user' ></i></button>
+                            <button id="cart-btn"><i class='bx bxs-cart-alt' ></i></button>
+                         </div>
+                         
+                         <!-- ___ Mobile Menu ___ -->
+                          <button class="menu-btn" id="menu-btn">
+                             <i class='bx bx-menu' id="icon"></i>
+                          </button>
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- ____________  Cart Modal Start Here  _____________ -->
+        <div class="cart-modal modal" id="cart-modal">
+            
+            <!-- ___ Close Btn ___ -->
+            <button class="close cart-close-modal" id="cart-close-btn">
+                 <i class="bx bx-x"></i>
+            </button>
+            
+            <!--___ Header ___ -->
+            <h3 class="d-block section__subtitle mt-4">_My Cart_</h3>
+            
+            <!-- ___ Cart Container __ -->
+             <div class="cart-container">
+                <ul class="cart-items mt-4 flex-column gap-25">
+                    
+                    <!-- ___ Single cart item ___ -->
+                    <li class="cart-item flex gap-30">
+                        <div class="cart-img">
+                            <img src="image/cart-2.png" alt="">
+                        </div>
+                        
+                        <!-- ___ Cart Details___ -->
+                         <div class="cart-details ">
+                            
+                            <div>
+                                <div>
+                                    <h4 class="min-title">Windbreaker</h4>
+                                    <div class="price text-hover font-medium">$13</div>
+                                </div>
+                                
+                                <!-- ___ Quantity Buttons ___ -->
+                                <div class="cart-quantity  flex gap-30 mt-3">
+                                    
+                                    <div class="flex gap-15 cart-quantity-btns">
+                                        <button><i class="bx bx-minus"></i></button>
+                                        <div class="display-quantity">1</div>
+                                        <button><i class="bx bx-plus"></i></button>
+                                    </div>
+                                    
+                                    <!-- ___ Delete Item___ -->
+                                     <button class="delete-cart-item">
+                                        <i class="bx bx-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                         </div>
+                    </li>
+                    
+                    <!-- ___ Single cart item ___ -->
+                    <li class="cart-item flex gap-30">
+                        <div class="cart-img">
+                            <img src="image/cart-1.png" alt="">
+                        </div>
+                        
+                        <!-- ___ Cart Details___ -->
+                         <div class="cart-details">
+                            
+                            <div>
+                                <div>
+                                    <h4 class="min-title">Windbreaker</h4>
+                                    <div class="price text-hover font-medium">$13</div>
+                                </div>
+                                
+                                <!-- ___ Quantity Buttons ___ -->
+                                <div class="cart-quantity flex gap-30 mt-3">
+                                    
+                                    <div class="flex gap-15 cart-quantity-btns">
+                                        <button><i class="bx bx-minus"></i></button>
+                                        <div class="display-quantity">1</div>
+                                        <button><i class="bx bx-plus"></i></button>
+                                    </div>
+                                    
+                                    <!-- ___ Delete Item___ -->
+                                     <button class="delete-cart-item">
+                                        <i class="bx bx-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                         </div>
+                    </li>
+                    
+                    <!-- ___ Single cart item ___ -->
+                    <li class="cart-item flex gap-30">
+                        <div class="cart-img">
+                            <img src="image/cart-3.png" alt="">
+                        </div>
+                        
+                        <!-- ___ Cart Details___ -->
+                         <div class="cart-details">
+                            
+                            <div>
+                                <div>
+                                    <h4 class="min-title">Windbreaker</h4>
+                                    <div class="price text-hover font-medium">$15</div>
+                                </div>
+                                
+                                <!-- ___ Quantity Buttons ___ -->
+                                <div class="cart-quantity flex gap-30 mt-3">
+                                    
+                                    <div class="flex gap-15 cart-quantity-btns">
+                                        <button><i class="bx bx-minus"></i></button>
+                                        <div class="display-quantity">1</div>
+                                        <button><i class="bx bx-plus"></i></button>
+                                    </div>
+                                    
+                                    <!-- ___ Delete Item___ -->
+                                     <button class="delete-cart-item">
+                                        <i class="bx bx-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                         </div>
+                    </li>
+                    
+                    <!-- ___ Single cart item ___ -->
+                    <li class="cart-item flex gap-30">
+                        <div class="cart-img">
+                            <img src="image/cart-2.png" alt="">
+                        </div>
+                        
+                        <!-- ___ Cart Details___ -->
+                         <div class="cart-details">
+                            
+                            <div>
+                                <div>
+                                    <h4 class="min-title">Mans New Collection</h4>
+                                    <div class="price text-hover font-medium">$23</div>
+                                </div>
+                                
+                                <!-- ___ Quantity Buttons ___ -->
+                                <div class="cart-quantity flex gap-30 mt-3">
+                                    
+                                    <div class="flex gap-15 cart-quantity-btns">
+                                        <button><i class="bx bx-minus"></i></button>
+                                        <div class="display-quantity">1</div>
+                                        <button><i class="bx bx-plus"></i></button>
+                                    </div>
+                                    
+                                    <!-- ___ Delete Item___ -->
+                                     <button class="delete-cart-item">
+                                        <i class="bx bx-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                         </div>
+                    </li>
+                </ul>
+             </div>
+            
+             <!-- ___ Cart Modal Footer ___ -->
+              <div class="cart-modal-footer flex-between ">
+                <div class="total-quantity"><span>4</span>item</div>
+                <div class="total-price font-bold section__subtitle">$<span>33</span></div>
+              </div>
+        </div>
+        <!-- ____________  Cart Modal End Here  _____________ -->
+         
+        
+        <!-- ____________  Login Modal Start Here  _____________ -->
+        <div class="login-modal modal" id="login-modal">
+            
+            <!-- ___ Close Btn ___ -->
+            <button class="close cart-close-modal" id="login-close-btn">
+                 <i class="bx bx-x"></i>
+            </button>
+            
+            <!--___ Header ___ -->
+            <h3 class="d-block section__subtitle mt-4">_Login_</h3>
+            
+            
+            <!-- ___  Login Form ___ -->
+            <form action="" class="gap-20 flex-column login-form">
+                <div class="login-content">
+                    <label for="modal-email">Email</label>
+                    <input  id="modal-email" type="text" class="login-input">
+                </div>
+                <div class="login-content">
+                    <label for="modal-password">Password</label>
+                    <input  id="modal-password" type="password" class="login-input">
+                </div>
+                <div>
+                    <button type="submit" class="btn">Sign up</button>
+                </div>
+            </form>
+            
+            <div class="login-modal-footer">
+                <small>Not a member? <a href="register.html">Sign up now</a></small>
+            </div>
+            
+        </div>
+        <!-- ____________  Login Modal End Here  _____________ -->
+     </header>
+    <!-- ================  Header End Here  ================ -->
+     
+    
+    
+    
+    
+    <!-- ============ Main  Content ================ -->
+    <main>
+        <!-- ____________  Breadcrumb Start ____________ -->
+        <section class="mb-minus-30">
+            <div class="contaienr">
+                <div class="breadcrumb">
+                    <div class="section__title">Faq's Page</div>
+                    <div class="font-medium text-center mt-1 ">
+                        <a class="before-page" href="index.html">Home</a> >
+                        <span class="current-page">Faq</span>
+                    </div>
+                </div>
+            </div>
+            </section>
+        <!-- ____________  Breadcrumb End ____________ -->
+         
+        
+        
+        
+        
+        <!-- ____________  Questions Section Start ____________ -->
+        <section>
+            <div class="container">
+                <div class="questions">
+                    <div class="questions-items grid-2 gap-25">
+                        
+                        <!-- _____ Single Question _____ -->
+                        <div class="questions-item ">
+                            <div class="question-item-header">
+                                <span><i class='bx bx-plus' ></i></span>
+                                <div class="section__subtitle">How to order to your website?</div>
+                            </div>
+                            
+                            <div class="question-info">
+                                <p class="question-description">
+                                    step 1: first you go to our site.then ipsum dolor sit amet consectetur, adipisicing elit. Eaque est blanditiis accusamus saepe quam!
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- _____ Single Question _____ -->
+                        <div class="questions-item">
+                            <div class="question-item-header">
+                                <span><i class='bx bx-plus' ></i></span>
+                                <div class="section__subtitle">How many time delivery it?</div>
+                            </div>
+                            
+                            <div class="question-info">
+                                <p class="question-description">
+                                    we shipped very quick
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- _____ Single Question _____ -->
+                        <div class="questions-item">
+                            <div class="question-item-header">
+                                <span><i class='bx bx-plus' ></i></span>
+                                <div class="section__subtitle">How to order to your website?</div>
+                            </div>
+                            
+                            <div class="question-info">
+                                <p class="question-description">
+                                    step 1: first you go to our site.then ipsum dolor sit amet consectetur, adipisicing elit. Eaque est blanditiis accusamus saepe quam!
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- _____ Single Question _____ -->
+                        <div class="questions-item">
+                            <div class="question-item-header">
+                                <span><i class='bx bx-plus' ></i></span>
+                                <div class="section__subtitle">How to order to your website?</div>
+                            </div>
+                            
+                            <div class="question-info">
+                                <p class="question-description">
+                                    step 1: first you go to our site.then ipsum dolor sit amet consectetur, adipisicing elit. Eaque est blanditiis accusamus saepe quam!
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- _____ Single Question _____ -->
+                        <div class="questions-item">
+                            <div class="question-item-header">
+                                <span><i class='bx bx-plus' ></i></span>
+                                <div class="section__subtitle">How to order to your website?</div>
+                            </div>
+                            
+                            <div class="question-info">
+                                <p class="question-description">
+                                    step 1: first you go to our site.then ipsum dolor sit amet consectetur, adipisicing elit. Eaque est blanditiis accusamus saepe quam!
+                                </p>
+                            </div>
+                        </div>
+                        <!-- _____ Single Question _____ -->
+                        <div class="questions-item">
+                            
+                            <div class="question-item-header">
+                                <span><i class='bx bx-plus' ></i></span>
+                                <div class="section__subtitle">How to order to your website?</div>
+                            </div>
+                            
+                            <div class="question-info">
+                                <p class="question-description">
+                                    step 1: first you go to our site.then ipsum dolor sit amet consectetur, adipisicing elit. Eaque est blanditiis accusamus saepe quam!
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ___ Scroll Up ___ -->
+            <a href="#" class="scroll-up" id="scroll-up">
+                <i class='bx bxs-chevrons-up'></i>
+            </a>
+        </section>
+        <!-- ____________  Questions Section End ____________ -->
+    </main>
+    <!-- ============ Main  End ================ -->
+    
+    
+    <!-- ============ Footer  Start ================ -->
+     <footer>
+        <div class="container">
+            <div class="footer-items grid-4">
+                
+                <div class="footer-item">
+                    <!-- ___ Logo ___ -->
+                    <div class="logo">
+                        <a href="index.html"><i class='bx bxs-shopping-bags'></i> e-shopper</a>
+                    </div>
+                    
+                    <p class="mt-3">
+                        Enjoy the biggest sale of your life
+                    </p>
+                    
+                    <div class="social mt-4 flex gap-20">
+                        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                        <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                        <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    </div>
+                </div>
+                
+                <!-- ___ Single Footer Item ___ -->
+                <div class="footer-item">
+                    <div class="section__subtitle">About</div>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Support Center</a></li>
+                    </ul>
+                </div>
+                
+                <!-- ___ Single Footer Item ___ -->
+                <div class="footer-item">
+                    <div class="section__subtitle">Our Service</div>
+                    <ul>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Discounts</a></li>
+                        <li><a href="#">Shipping Center</a></li>
+                    </ul>
+                </div>
+                
+                <!-- ___ Single Footer Item ___ -->
+                <div class="footer-item">
+                    <div class="section__subtitle">Our Company</div>
+                    <ul>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <small class="text-center d-block">@copyright tanvirahmed 2024</small>
+            </div>
+        </div>
+     </footer>
+    <!-- ============ Footer  End ================ -->
+     
+    
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

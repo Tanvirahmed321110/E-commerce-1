@@ -191,3 +191,24 @@ questionItems.forEach(item =>{
         }
     })
 })
+
+
+
+
+
+
+
+// Theme colors
+const colors = document.querySelectorAll('.theme-color')
+const switcherBtn = document.querySelector('.style-switcher-toggler')
+const switcher = document.querySelector('.style-switcher')
+
+switcherBtn.addEventListener('click', () => {
+    switcher.classList.toggle('active')
+})
+
+colors.forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active')
+    })
+})
